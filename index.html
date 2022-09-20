@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kinobillett</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <h1>Bestilling av kinobiletter</h1>
+
+    <table>
+        <!--Dropdown meny for å velge film-->
+        <tr>
+            <td>Velg film</td>
+            <td><select id="film">
+                <option>Velg film her</option>
+                <option>Tenet</option>
+                <option>Clouds</option>
+                <option>Inception</option>
+                <option>Moonlight</option>
+            </select>
+                <span id="film.error" style="color: red"></span></td>
+        </tr>
+
+        <!--Antall biletter-->
+        <tr><td>Antall</td><td><input type="number" id="antall"> <span id="antall.error" style="color: red"></span> </td></tr>
+
+        <!--Tabell for å registrere personinformasjon-->
+        <tr><td>Fornavn</td> <td><input type="text" id="fornavn"> <span id="fornavn.error" style="color: red"></span> </td> </tr>
+        <tr><td>Etternavn</td> <td><input type="text" id="etternavn"> <span id="etternavn.error" style="color: red"></span> </td> </tr>
+        <tr><td>Telefonnr</td> <td><input type="number" id="telefonnr"> <span id="telefonnr.error" style="color: red"></span> </td> </tr>
+        <tr><td>Epost</td> <td><input type="text" id="epost"> <span id="epost.error" style="color: red"></span> </td> </tr>
+        <tr><td><button onclick="bestill()">Kjøp billett</button></td></tr>
+    </table>
+
+    <!--Kode for å få frem alle registrerte billetter-->
+    <h3>Alle billetter</h3>
+    <div id="billettRegister"></div>
+
+    <!--Knapp for å slette alle billettene-->
+    <button onclick="slettBillett()">Slett alle billetter</button>
+</body>
+</html>
